@@ -1,32 +1,151 @@
-# React + TypeScript + Vite
+# PAKGO
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Pack up. Go places.**
 
-Currently, two official plugins are available:
+PAKGO is a fictional travel backpack brand landing page created as part
+of a website-building assessment. The website presents the PAKGO Alpine
+Backpack through a responsive layout, campaign imagery, testimonials,
+and an alternating image-and-text gallery.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+The website is designed to feel like a modern, approachable
+outdoor-lifestyle brand. Its visual direction combines a clean editorial
+layout with warm earthy colors, expressive typography, and minimalist
+campaign illustrations.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+-   Responsive header with desktop navigation and a mobile dropdown menu
+-   Hero section featuring the PAKGO Alpine Backpack
+-   Three-column testimonial section with placeholder customer profiles
+    and copy
+-   Four-row gallery with alternating image and text layouts
+-   Footer with brand information and section navigation
+-   Scroll-to-top button
+-   Hover interactions and responsive styling
+-   Visible section and element labels included for the assessment
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Built With
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+-   React
+-   TypeScript
+-   Vite
+-   Tailwind CSS
+-   HTML and CSS
+
+## Project Structure
+
+``` text
+src/
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── Testimonials.tsx
+│   ├── Gallery.tsx
+│   ├── Footer.tsx
+│   └── ScrollToTop.tsx
+├── App.tsx
+└── index.css
+
+public/
+└── images/
+    ├── backpack.png
+    ├── gallery-1.jpg
+    ├── gallery-2.jpg
+    ├── gallery-3.jpg
+    └── gallery-4.png
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## Brand Color Palette
+
+### Primary brand colors
+
+  Color           Hex         Usage
+  --------------- ----------- --------------------------------
+  Cream           `#F5F1E8`   Main page background
+  Leather Brown   `#79583C`   Primary buttons and accents
+  Dark Brown      `#4B2E1B`   Headings and brand text
+  Muted Olive     `#85866A`   Secondary headings and accents
+
+### Supporting colors
+
+  Color          Hex         Usage
+  -------------- ----------- -------------------------------------
+  Sage Gray      `#686B60`   Body text and descriptions
+  Warm Sand      `#E5DDCE`   Borders, dividers, and image frames
+  Soft Ivory     `#FAF8F2`   Cards and content backgrounds
+  Footer Beige   `#EDE8DC`   Footer background
+
+### Interaction colors
+
+  Color          Hex         Usage
+  -------------- ----------- ---------------------------
+  Deep Leather   `#5F422C`   Brown button hover state
+  Forest Olive   `#535F40`   Scroll-to-top hover state
+
+The four primary colors establish the brand identity. Supporting and
+interaction colors are used for layout contrast, readability, and hover
+feedback.
+
+## Getting Started
+
+### Prerequisites
+
+-   Node.js
+-   npm
+
+### Installation
+
+1.  Clone or download this repository.
+
+2.  Open the project folder in a terminal.
+
+3.  Install the dependencies:
+
+    ``` bash
+    npm install
+    ```
+
+4.  Start the local development server:
+
+    ``` bash
+    npm run dev
+    ```
+
+5.  Open the local URL shown in the terminal.
+
+### Production Build
+
+To create a production build:
+
+``` bash
+npm run build
+```
+
+To preview the production build locally:
+
+``` bash
+npm run preview
+```
+
+## Notes
+
+-   PAKGO is a fictional brand created for an assessment project.
+-   Testimonial names, portraits, and review copy are placeholders and
+    should not be interpreted as verified customer endorsements.
+-   Campaign and product imagery are used for the website presentation.
+-   The project is intended as a front-end website demonstration; it
+    does not include real product checkout or payment functionality.
+
+## Deployment
+
+The website can be published using a hosting platform that supports Vite
+projects, such as Vercel. Connect the project repository, use the
+standard Vite build command (`npm run build`), and set the output
+directory to `dist`.
+
+------------------------------------------------------------------------
+
+Created as part of a website-building assessment.

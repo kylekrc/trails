@@ -72,10 +72,10 @@ function Hero() {
             {/* soft glacier backdrop */}
             <div
               aria-hidden="true"
-              className="absolute -inset-3 -z-0 rounded-[2.5rem] bg-glacier/70 md:-inset-4"
+              className="absolute -inset-3 z-0 rounded-[2.5rem] bg-glacier/70 md:-inset-4"
             />
             <div className="relative rounded-4xl border border-sand bg-sand p-2.5 shadow-[0_30px_60px_-30px_rgb(75_46_27/0.35)] md:p-3">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.6rem] sm:aspect-[5/4] lg:aspect-[4/3.6]">
+              <div className="relative aspect-4/3 overflow-hidden rounded-[1.6rem] sm:aspect-5/4 lg:aspect-[4/3.6]">
                 <img
                   src="/images/gallery-1.jpg"
                   alt="Showcasing the PAKGO travel backpack"

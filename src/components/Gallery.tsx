@@ -85,7 +85,7 @@ function Gallery() {
               >
                 {/* Image */}
                 <div
-                  className={`group relative aspect-[4/3] min-w-0 overflow-hidden rounded-2xl border border-sand bg-sand md:aspect-auto md:min-h-[26rem] ${
+                  className={`group relative aspect-4/3 min-w-0 overflow-hidden rounded-2xl border border-sand bg-sand md:aspect-auto md:min-h-104 ${
                     story.imageFirst ? "order-1" : "order-1 md:order-2"
                   }`}
                 >

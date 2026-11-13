@@ -56,7 +56,7 @@ function Navbar() {
             <p className="tag">This is a button</p>
 
             <div>
-              <a href="#gallery" className="btn-primary !px-5 !py-2.5 !gap-2">
+              <a href="#gallery" className="btn-primary px-5! py-2.5! gap-2!">
                 Explore
                 <span className="arrow">→</span>
               </a>
@@ -113,7 +113,7 @@ function Navbar() {
             <a
               href="#gallery"
               onClick={() => setMenuOpen(false)}
-              className="btn-primary mt-3 !py-3"
+              className="btn-primary mt-3 py-3!"
             >
               Explore <span className="arrow">→</span>
             </a>

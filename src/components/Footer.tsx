@@ -1,91 +1,72 @@
-
 function Footer() {
+  const links = [
+    { label: "Home", href: "#top" },
+    { label: "The Backpack", href: "#gallery" },
+    { label: "Reviews", href: "#testimonials" },
+  ];
+
   return (
-    <footer className="border-t border-[#E5DDCE] bg-[#EDE8DC] px-6 pb-8 pt-12 md:px-12 md:pt-16 lg:px-20">
-      <p className="mb-8 text-xs font-semibold uppercase tracking-[0.25em] text-[#79583C]">
-        This is the footer section
-      </p>
+    <footer className="border-t border-sand-deep bg-footer pb-8 pt-14 md:pt-16">
+      <div className="page-container">
+        <p className="section-label">This is the footer section</p>
 
-      <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          {/* Brand */}
+          <div>
+            <p className="tag">This is a logo</p>
 
-        {/* Brand */}
-        <div>
-          <p className="mb-2 text-[10px] tracking-wide text-[#686B60]">
-            This is a logo
-          </p>
-
-          <div className="flex items-center gap-3">
-            <img
-              src="/images/backpack.png"
-              alt="PAKGO backpack logo"
-              className="h-14 w-14 object-contain"
-            />
-
-            <div className="flex flex-col">
-              <a
-                href="#top"
-                className="text-xl font-bold tracking-[0.16em] text-[#4B2E1B] transition-colors hover:text-[#79583C]"
-              >
+            <a href="#top" className="group flex items-center gap-3">
+              <img
+                src="/images/backpack.png"
+                alt="PAKGO backpack logo"
+                className="h-14 w-14 object-contain transition-transform duration-300 group-hover:-rotate-6"
+              />
+              <span className="text-xl font-bold tracking-[0.16em] text-bark transition-colors group-hover:text-leather">
                 PAKGO
-              </a>
-            </div>
+              </span>
+            </a>
+
+            <p className="mt-5 max-w-xs text-sm leading-7 text-sage">
+              Wherever the road leads, bring a little curiosity and a sense of
+              adventure.
+            </p>
           </div>
 
-          <p className="mt-5 max-w-xs text-sm leading-7 text-[#686B60]">
-            Wherever the road leads, bring a little curiosity and a sense of adventure.
-          </p>
+          {/* Navigation */}
+          <div>
+            <p className="tag">This is a navigation menu</p>
+
+            <nav className="flex flex-col items-start gap-3">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-leather">
+                Explore
+              </p>
+              {links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="group relative text-sm text-sage transition-colors hover:text-bark"
+                >
+                  {link.label}
+                  <span className="absolute -bottom-0.5 left-0 right-0 h-px origin-left scale-x-0 bg-leather transition-transform duration-300 group-hover:scale-x-100" />
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
 
-        {/* Navigation */}
-        <div>
-          <p className="mb-2 text-[10px] tracking-wide text-[#686B60]">
-            This is a navigation menu
-          </p>
-
-          <nav className="flex flex-col items-start gap-4">
-            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#79583C]">
-              Explore
+        {/* Copyright */}
+        <div className="mt-12 flex flex-col gap-4 border-t border-sand-deep pt-6 md:mt-14 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="tag">This is a copyright text</p>
+            <p className="text-xs text-sage">
+              © {new Date().getFullYear()} PAKGO. All rights reserved.
             </p>
+          </div>
 
-            <a
-              href="#top"
-              className="text-sm text-[#686B60] transition-colors hover:text-[#4B2E1B]"
-            >
-              Home
-            </a>
-
-            <a
-              href="#gallery"
-              className="text-sm text-[#686B60] transition-colors hover:text-[#4B2E1B]"
-            >
-              The Backpack
-            </a>
-
-            <a
-              href="#testimonials"
-              className="text-sm text-[#686B60] transition-colors hover:text-[#4B2E1B]"
-            >
-              Reviews
-            </a>
-          </nav>
-        </div>
-      </div>
-
-      {/* Copyright */}
-      <div className="mt-12 flex flex-col gap-3 border-t border-[#D8CEBC] pt-6 md:mt-16 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="mb-2 text-[10px] tracking-wide text-[#686B60]">
-            This is a copyright text
-          </p>
-
-          <p className="text-xs text-[#858579]">
-            © {new Date().getFullYear()} PAKGO. All rights reserved.
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-forest">
+            Pack up. Go places.
           </p>
         </div>
-
-        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#85866A]">
-          Pack up. Go places.
-        </p>
       </div>
     </footer>
   );

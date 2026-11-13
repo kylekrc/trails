@@ -9,7 +9,7 @@ function ScrollToTop() {
       setShowScrollTop(window.scrollY > 300);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -22,7 +22,7 @@ function ScrollToTop() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center md:bottom-8 md:right-8">
-        <p className="mb-1 text-[10px] tracking-wide text-[#686B60]">
+        <p className="tag">
         This is a button
         </p>
 
@@ -34,7 +34,7 @@ function ScrollToTop() {
             })
         }
         aria-label="Back to top"
-        className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-[#697650] text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#535F40]"
+        className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-forest text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-bark active:translate-y-0"
         >
         <svg
 						xmlns="http://www.w3.org/2000/svg"
